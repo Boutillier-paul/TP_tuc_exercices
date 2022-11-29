@@ -2,10 +2,12 @@ name: Pylint
 
 on: 
   workflow_dispatch:
-  push: ['master', 'main']
+  push: 
+    branches:
+      - main
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
 
     strategy:
